@@ -24,8 +24,11 @@ export default AccountPage;
 
 export const getServerSideProps = async ({ params, res, req }: GetServerSidePropsContext) => {
   const { value } = params;
+
   let address = String(value);
   const apiConf = apiConfigV2();
+
+
 
   if (!Address.isValid(address)) {
     const domain = isDomain(address) ? address.toLocaleLowerCase() : `${address}.ton`;
@@ -33,6 +36,7 @@ export const getServerSideProps = async ({ params, res, req }: GetServerSideProp
     const dnsname = { domainName: domain };
     try {
       const resolved = await dnsService.dnsResolve(dnsname);
+      console.log(`resolved`, resolved);
       address = resolved.wallet.address;
     } catch (error) {
       console.log(error);
@@ -164,8 +168,10 @@ export const getServerSideProps = async ({ params, res, req }: GetServerSideProp
     Sentry.captureException(error);
   }
 
-  props.doscAsm = docsAsm;
+  // props.doscAsm = docsAsm;
   props.errors = errors;
+
+  console.log('props', props);
 
   return { props: serializeNestedObject(props) };
 };

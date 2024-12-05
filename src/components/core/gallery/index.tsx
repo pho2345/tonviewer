@@ -1,6 +1,6 @@
 import { useResponsive } from '@farfetch/react-context-responsive';
 import { FC, useState } from 'react';
-import Lottie from 'lottie-react';
+// import Lottie from 'lottie-react';
 import styled, { useTheme } from 'styled-components';
 import Avatar from '../avatar';
 import { Column } from '../column';
@@ -113,7 +113,9 @@ const FullCard = (props) => {
     <Link href={props.link}>
       <FullGalleryItem gap={theme.spacing.small}>
         {lottie
-          ? <Box rounded squared><Lottie animationData={lottie} loop /></Box>
+          ? <Box rounded squared>
+            {/* <Lottie animationData={lottie} loop /> */}
+            </Box>
           : <Avatar squared src={props.image} alt={props.label} size={imageSize} />}
 
         <Column justify='center'>

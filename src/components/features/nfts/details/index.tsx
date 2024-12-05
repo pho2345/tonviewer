@@ -1,4 +1,4 @@
-import Lottie from 'lottie-web';
+// import Lottie from 'lottie-web';
 import { useResponsive } from '@farfetch/react-context-responsive';
 import { FC, useEffect, useRef, useState } from 'react';
 import { useEffectOnce } from 'react-use';
@@ -72,13 +72,13 @@ const NftDetailsMobilePresenter: FC<NftDetailsPresenterProps> = ({
 
   useEffect(() => {
     if (refBox && lottie) {
-      Lottie.loadAnimation({
-        container: refBox.current,
-        renderer: 'svg',
-        loop: true,
-        autoplay: true,
-        animationData: lottie
-      });
+      // Lottie.loadAnimation({
+      //   container: refBox.current,
+      //   renderer: 'svg',
+      //   loop: true,
+      //   autoplay: true,
+      //   animationData: lottie
+      // });
     }
   }, [refBox, lottie]);
 
@@ -200,13 +200,13 @@ const NftDetailsDesktopPresenter: FC<NftDetailsPresenterProps> = ({
 
   useEffect(() => {
     if (refBox && lottie) {
-      Lottie.loadAnimation({
-        container: refBox.current,
-        renderer: 'svg',
-        loop: true,
-        autoplay: true,
-        animationData: lottie
-      });
+      // Lottie.loadAnimation({
+      //   container: refBox.current,
+      //   renderer: 'svg',
+      //   loop: true,
+      //   autoplay: true,
+      //   animationData: lottie
+      // });
     }
   }, [refBox, lottie]);
 

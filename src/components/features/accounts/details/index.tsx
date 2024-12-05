@@ -16,7 +16,7 @@ import {
   AccountEvents
 } from 'tonapi-sdk-js';
 import { useMedia } from 'react-use';
-import Lottie from 'lottie-react';
+// import Lottie from 'lottie-react';
 import QR from '../../../core/qr';
 import { ComputerIcon } from '../../../core/icons/computer';
 import { TermIcon } from '../../../core/icons/terminal';
@@ -2584,7 +2584,7 @@ const AccountDetailsCode = ({
       {!isLoadedCode && (
         <div className={'wrapper-animation'}>
           <div className={'animation'}>
-            <Lottie animationData={LogoAnimation} loop autoPlay />
+            {/* <Lottie animationData={LogoAnimation} loop autoPlay /> */}
           </div>
         </div>
       )}
@@ -2652,6 +2652,7 @@ export const AccountDetailsContainer: FC<AccountPageProps> = (props: any) => {
   const nftDetailsModel = useNftDetailsModel(props.nftDetails);
   const jettonDetailsModel = useJettonDetailsModel(props.jettonDetails);
   const nftListModel = useNftListModel(props.nfts);
+
 
   // Address;
   // const rawAddress = base64ToAddress(props.address);

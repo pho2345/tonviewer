@@ -1,5 +1,5 @@
 import { css } from '@linaria/core';
-import Lottie from 'lottie-react';
+// import Lottie from 'lottie-react';
 import TonviewerLottie from 'tonviewer-web/assets/animations/logo.json';
 
 const logoContainer = css`
@@ -12,7 +12,7 @@ const logoContainer = css`
 export const Logo = ({ w = 84, h = 96, isPlay = false }: { w?: number; h?: number; isPlay?: boolean }) => {
   return (
     <div className={logoContainer} style={{ width: w, height: h }}>
-      <Lottie
+      {/* <Lottie
         loop={isPlay}
         autoPlay={isPlay}
         width={w}
@@ -20,7 +20,7 @@ export const Logo = ({ w = 84, h = 96, isPlay = false }: { w?: number; h?: numbe
         className={'animation-logo'}
         animationData={TonviewerLottie}
         style={{ width: w, height: h }}
-      />
+      /> */}
     </div>
   );
 };
